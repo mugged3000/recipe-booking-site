@@ -5,7 +5,7 @@ import React from "react";
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">RECIPE <span>BOOKSITE</span></a>
+        <a className="navbar-brand" href="#" style={{fontWeight:"bold",fontFamily:"sans-serif"}}>RECIPE <span>BOOKSITE</span></a>
         <button
           className="navbar-toggler border-0 shadow-none"
           type="button"
