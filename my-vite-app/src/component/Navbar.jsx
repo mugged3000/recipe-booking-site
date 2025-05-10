@@ -1,52 +1,72 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 
- const Navbar = () => {
+const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#" style={{fontWeight:"bold",fontFamily:"sans-serif"}}>RECIPE <span>BOOKSITE</span></a>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary w-100 mx-auto mt-2 rounded">
+      <div className="container-fluid px-4">
+        {/* Logo */}
+        <Link
+          className="navbar-brand"
+          to="/"
+          style={{ fontWeight: "bold", fontFamily: "sans-serif" }}
+        >
+          RECIPE <span style={{ color: "orange" }}>BOOKSITE</span>
+        </Link>
+
+        {/* Hamburger */}
         <button
           className="navbar-toggler border-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto text-end">
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"  href="#">Disabled</a>
-            </li>
-          </ul>
-           <form className="d-flex" role="search">
-        <input className="form-control me-2 " type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+        {/* Navbar Links and Input */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <div className="d-flex flex-column flex-lg-row align-items-end align-items-lg-center gap-3 w-100 justify-content-end">
+            {/* Nav Links */}
+            <ul className="navbar-nav d-flex flex-column flex-lg-row align-items-end align-items-lg-center gap-2 gap-lg-3 mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/food">Foods</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/cookers">Cookers</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/steps">Steps</Link>
+              </li>
+            </ul>
+
+            {/* Input field */}
+            <div style={{ width: "250px", maxWidth: "100%" }}>
+              <div className="input-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
+                  aria-label="Email"
+                  aria-describedby="button-addon2"
+                />
+                <button className="btn btn-outline-secondary" type="button" id="button-addon2">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </nav>
   );

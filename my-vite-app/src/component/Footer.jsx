@@ -1,19 +1,19 @@
-
+import React from "react";
 
 const FooterSection = () => {
   return (
-    <>
-    <footer className="bg-dark bg-color text-light p-5  text-center text-lg-start mt-5">
-      <div className="container-fluid">
-        <div className="row">
+
+    <footer className=" bg-color  text-light mt-5 ">
+      <div className="container-fluid text-center">
+        <div className="row mx-0">
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">About Us</h5>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" className="text-dark">Our Story</a>
+                <a href="#!" className="text-light">Our Story</a>
               </li>
               <li>
-                <a href="#!" className="text-dark">Contact Us</a>
+                <a href="#!" className="text-light">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -21,13 +21,13 @@ const FooterSection = () => {
             <h5 className="text-uppercase">Recipe Categories</h5>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" className="text-dark">Breakfast</a>
+                <a href="#!" className="text-light">Breakfast</a>
               </li>
               <li>
-                <a href="#!" className="text-dark">Lunch</a>
+                <a href="#!" className="text-light">Lunch</a>
               </li>
               <li>
-                <a href="#!" className="text-dark">Dinner</a>
+                <a href="#!" className="text-light">Dinner</a>
               </li>
             </ul>
           </div>
@@ -35,13 +35,13 @@ const FooterSection = () => {
             <h5 className="text-uppercase">Social Media</h5>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" className="text-dark">Facebook</a>
+                <a href="#!" className="text-light">Facebook</a>
               </li>
               <li>
-                <a href="#!" className="text-dark">Instagram</a>
+                <a href="#!" className="text-light">Instagram</a>
               </li>
               <li>
-                <a href="#!" className="text-dark">Twitter</a>
+                <a href="#!" className="text-light">Twitter</a>
               </li>
             </ul>
           </div>
@@ -51,7 +51,7 @@ const FooterSection = () => {
             <form>
               <div className="input-group mb-3">
                 <input type="email" className="form-control" placeholder="Email" aria-label="Email" aria-describedby="button-addon2" />
-                <button className="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                <button className="btn btn-outline-light" type="button" id="button-addon2">Subscribe</button>
               </div>
             </form>
           </div>
@@ -61,8 +61,7 @@ const FooterSection = () => {
         <p>&copy; 2023 Recipe Book. All Rights Reserved.</p>
       </div>
     </footer>
-    </>
   );
-  
 };
+
 export default FooterSection;
